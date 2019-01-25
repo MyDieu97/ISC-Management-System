@@ -11,7 +11,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using ISCSystem.Models;
 
-namespace ISCSystem.Controllers
+namespace WebApplication1.Controllers
 {
     public class UsersController : ApiController
     {
@@ -75,7 +75,9 @@ namespace ISCSystem.Controllers
 
         // POST: api/Users
         [ResponseType(typeof(Users))]
-        public async Task<IHttpActionResult> PostUsers(Users users)
+        [HttpPost]
+        [Route("api/Users")]
+        public async Task<IHttpActionResult> PostUsers([FromBody] Users users)
         {
             if (!ModelState.IsValid)
             {
@@ -85,11 +87,14 @@ namespace ISCSystem.Controllers
             db.listUsers.Add(users);
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = users.UserID }, users);
+            //return CreatedAtRoute("DefaultApi", new { id = users.UserID }, users);
+            return RedirectToRoute("Default", new { controller = "UsersView", action = "Index" });
         }
 
         // DELETE: api/Users/5
         [ResponseType(typeof(Users))]
+        [HttpDelete]
+        [Route("api/Users/{id}")]
         public async Task<IHttpActionResult> DeleteUsers(int id)
         {
             Users users = await db.listUsers.FindAsync(id);
@@ -101,7 +106,8 @@ namespace ISCSystem.Controllers
             db.listUsers.Remove(users);
             await db.SaveChangesAsync();
 
-            return Ok(users);
+            //return Ok(users);
+            return RedirectToRoute("Default", new { controller = "UsersView", action = "Index" });
         }
 
         protected override void Dispose(bool disposing)
