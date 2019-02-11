@@ -27,6 +27,8 @@ namespace WebApplication1.Controllers
 
         // GET: api/Users/5
         [ResponseType(typeof(Users))]
+        [HttpGet]
+        [Route("api/Users/{id}")]
         public async Task<IHttpActionResult> GetUsers(int id)
         {
             Users users = await db.listUsers.FindAsync(id);
@@ -40,6 +42,8 @@ namespace WebApplication1.Controllers
 
         // PUT: api/Users/5
         [ResponseType(typeof(void))]
+        [HttpPut]
+        [Route("api/Users/{id}")]
         public async Task<IHttpActionResult> PutUsers(int id, Users users)
         {
             if (!ModelState.IsValid)
