@@ -2,7 +2,7 @@
     ViewBag.Title = "Lecturer";
 }
 
-<h2>User</h2>
+
 <script src="~/Content/admin-lte/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <div class="box box-info">
     <div class="box-header with-border">
@@ -36,8 +36,8 @@
                             <label for="gender" class="col-sm-2 col-md-3 col control-label">Gender</label>
 
                             <div class="col-sm-9">
-                                <input type="radio" name="gender" value="male" checked> Nam
-                                <input type="radio" name="gender" value="female"> Nữ
+                                <input type="radio" name="gender" value="male" checked> Male
+                                <input type="radio" name="gender" value="female"> Female
                             </div>
                         </div>
 
@@ -93,7 +93,12 @@
                             <label for="dtpStartDate" class="col-sm-2 col-md-3 control-label">Start Date</label>
 
                             <div class="col-sm-9">
-                                <input type="date" class="form-control" id="dtpStartDate">
+                                <div class="input-group date">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input type="date" class="form-control pull-left" id="dtpDateofBirth" style="width:242px">
+                                </div>
                             </div>
                         </div>
                     </div>
