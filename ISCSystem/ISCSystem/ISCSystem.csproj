@@ -4019,6 +4019,19 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\SpecializedTrainingsView\Index.cshtml" />
     <Content Include="Views\CoursesView\Index.cshtml" />
+    <Content Include="Views\Diệu\Companies.cshtml" />
+    <Content Include="Views\Diệu\Lecturer.cshtml" />
+    <Content Include="Views\Diệu\Student.cshtml" />
+    <Content Include="Views\Diệu\Subjects.cshtml" />
+    <Content Include="Views\Diệu\WorkTrack.cshtml" />
+    <Content Include="Views\UsersView\Class.cshtml" />
+    <Content Include="Views\UsersView\Companies.cshtml" />
+    <Content Include="Views\UsersView\Lecturer.cshtml" />
+    <Content Include="Views\UsersView\Major.cshtml" />
+    <Content Include="Views\UsersView\Student.cshtml" />
+    <Content Include="Views\UsersView\Subjects.cshtml" />
+    <Content Include="Views\UsersView\University.cshtml" />
+    <Content Include="Views\UsersView\WorkTrack.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

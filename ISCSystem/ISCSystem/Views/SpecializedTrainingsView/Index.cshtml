@@ -5,6 +5,7 @@
 
 <h2>Specialized Trainings</h2>
 <script src="~/Content/admin-lte/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <div class="box box-info">
 	<div class="box-header with-border">
 		<h3 class="box-title">Create</h3>
@@ -74,8 +75,8 @@
 											<td>ABC001</td>
 											<td>Front-end</td>
 											<td>60</td>
-											<td>
-												<button class="btn btn-warning">Delete</button>
+											<td class="text-center">
+												<button class="far fa-trash-alt btn btn-danger" type="button"></button>
 											</td>
 										</tr>
 									</tbody>
@@ -133,20 +134,19 @@
 					</div>
 				</div>
 			</div>
-			<!-- /.box-body -->
-			<div class="box-footer">
-				<div class="row">
-					<div class="col-sm-2">
-						<button type="submit" class="btn btn-default" id="btnClear">Clear</button>
-					</div>
-					<div class="col-sm-2 pull-right">
-						<button type="submit" class="btn btn-info" id="btnCreate">Create</button>
-						<button type="submit" class="btn btn-success" id="btnSave">Save</button>
-					</div>
+		</div>
+		<!-- /.box-body -->
+		<div class="box-footer">
+			<div class="container-fluid">
+				<div class="col-sm-2">
+					<button type="submit" class="btn btn-default" id="btnClear">Clear</button>
+				</div>
+				<div class="col-sm-10 text-right">
+					<button type="submit" class="btn btn-success" id="btnSave">Save</button>
 				</div>
 			</div>
-			<!-- /.box-footer -->
 		</div>
+		<!-- /.box-footer -->
 	</form>
 </div>
 	<!-- Main content -->
@@ -177,8 +177,9 @@
 									</td>
 									<td>ISC01</td>
 									<td>10</td>
-									<td>
-										<button class="btn btn-default">Edit</button>
+									<td class="text-right">
+										<button class="fas fa-edit btn btn-default" type="button"></button>
+										<button class="far fa-trash-alt btn btn-danger" type="button"></button>
 									</td>
 								</tr>
 								<tr>
@@ -188,8 +189,9 @@
 									</td>
 									<td>ISC01</td>
 									<td>10</td>
-									<td>
-										<button class="btn btn-default">Edit</button>
+									<td class="text-right">
+										<button class="fas fa-edit btn btn-default" type="button"></button>
+										<button class="far fa-trash-alt btn btn-danger" type="button"></button>
 									</td>
 								</tr>								
 							<tfoot>

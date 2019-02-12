@@ -40,9 +40,11 @@
 							<div class="form-group col-12">
 								<label for="gender" class="col-sm-2 col control-label">Start date </label>
 
-								<div class="col-8">
-									<input type="date" name="numberofweek" id="txtNumber" style="border: 1px solid #ccc;">
-									<span>week(s)</span>
+								<div class="input-group date col-xs-12 col-md-6">
+									<div class="input-group-addon">
+										<i class="fa fa-calendar"></i>
+									</div>
+									<input type="text" class="form-control" id="datepicker">
 								</div>
 							</div>
 						</div>
@@ -50,21 +52,24 @@
 							<div class="form-group col-12">
 								<label for="gender" class="col-sm-2 col control-label">End date </label>
 
-								<div class="col-8">
-									<input type="date" name="numberofweek" id="txtNumber" style="border: 1px solid #ccc;">
-									<span>week(s)</span>
+								<div class="input-group date col-xs-12 col-md-6">
+									<div class="input-group-addon">
+										<i class="fa fa-calendar"></i>
+									</div>
+									<input type="text" class="form-control" id="datepicker">
 								</div>
 							</div>
 						</div>
 						<div class="row">
-							<label for="gender" class="col-sm-2 col control-label">Note</label>
-						</div>
-						<div class="row">
-							<div class="col-xs-10">
-								<div class="box-body pad">
-									<textarea id="editor1" name="editor1" rows="10" cols="80">
+							<div class="form-group col-12">
+								<label for="gender" class="col-sm-2 col control-label">Note</label>
+
+								<div class="col-8">
+									<div class="box-body pad">
+										<textarea id="editor1" name="editor1" rows="10" cols="80">
                                             Type your note here
 									</textarea>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -73,10 +78,10 @@
 						<div class="row">
 							<label for="lastName" class="col-6 control-label">Choose specialized trainings <i>(multiple)</i></label>
 
-							<div class="col-8">
+							<div class="col-xs-12 col-md-8">
 								<div class="form-group">
 									<select class="form-control select2" multiple="multiple" data-placeholder="Select a training" id="selectTrainings"
-											style="width: 100%;">
+											@*style="width: 80%;"*@>
 										<option>.NET</option>
 										<option>Java</option>
 										<option>Android</option>
@@ -93,7 +98,7 @@
 							<div class="col-auto">
 								<div class="form-group">
 									<label class="col-xs-6 col-md-2">First:</label>
-									<div class="input-group date col-xs-6 col-md-4">
+									<div class="input-group date col-xs-12 col-8">
 										<div class="input-group-addon">
 											<i class="fa fa-calendar"></i>
 										</div>
@@ -104,7 +109,7 @@
 							<div class="col-auto">
 								<div class="form-group">
 									<label class="col-xs-6 col-md-2">Second:</label>
-									<div class="input-group date col-xs-6 col-md-4">
+									<div class="input-group date col-xs-12 col-8">
 										<div class="input-group-addon">
 											<i class="fa fa-calendar"></i>
 										</div>
@@ -115,7 +120,7 @@
 							<div class="col-auto">
 								<div class="form-group">
 									<label class="col-xs-6 col-md-2">Third:</label>
-									<div class="input-group date col-xs-6 col-md-4">
+									<div class="input-group date col-xs-12 col-8">
 										<div class="input-group-addon">
 											<i class="fa fa-calendar"></i>
 										</div>
@@ -134,8 +139,7 @@
 				<div class="col-sm-2">
 					<button type="submit" class="btn btn-default" id="btnClear">Clear</button>
 				</div>
-				<div class="col-sm-2 pull-right" >
-					<button type="submit" class="btn btn-info" id="btnCreate">Create</button>
+				<div class="col-sm-10 text-right" >
 					<button type="submit" class="btn btn-success" id="btnSave">Save</button>
 				</div>
 			</div>
@@ -176,7 +180,6 @@
 								<td>10/02/2016</td>
 								<td>10/05/2016</td>
 								<td>Java</td>
-								<td></td>
 								<td>
 									<button class="btn btn-default">Edit</button>
 								</td>
@@ -190,7 +193,6 @@
 								<td>10/07/2016</td>
 								<td>10/11/2016</td>
 								<td>.NET</td>
-								<td></td>
 								<td>
 									<button class="btn btn-default">Edit</button>
 								</td>
@@ -204,7 +206,6 @@
 								<td>10/01/2017</td>
 								<td>10/04/2017</td>
 								<td>Android, Java</td>
-								<td></td>
 								<td>
 									<button class="btn btn-default">Edit</button>
 								</td>
@@ -222,7 +223,6 @@
 <!-- /.content -->
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
-<script src="~/Scripts/ckeditor/ckeditor.js"></script>
 <script src="~/Content/admin-lte/bower_component/select2/dist/js/select2.js"></script>
 <script src="~/Content/admin-lte/bower_component/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
 <script>
@@ -232,5 +232,4 @@
 	$('#datepicker').datepicker({
 		autoclose: true
 	})
-	CKEDITOR.replace('editor1');
 </script>
