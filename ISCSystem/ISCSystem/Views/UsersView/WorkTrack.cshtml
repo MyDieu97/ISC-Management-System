@@ -1,0 +1,125 @@
+﻿
+@{
+    ViewBag.Title = "WorkTrack";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>View</h2>
+
+<script src="~/Content/admin-lte/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<div class="box box-info">
+    <div class="box-header with-border">
+        <h3 class="box-title">Create new worktrack</h3>
+    </div>
+    <!-- /.box-header -->
+    <!-- form start -->
+
+    <form>
+        <div class="container">
+            <div class="box-body">
+                <input id="id" hidden />
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group col-md-12">
+                            <label for="txtStudentID" class="col-sm-2 col-md-3 col control-label">Student ID</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="txtStudentID" placeholder="">
+                            </div>
+                        </div>
+                        <!-- /.col-md-12 -->
+                        <div class="form-group col-md-12">
+                            <label for="dtpStartDate" class="col-sm-2 col-md-3 control-label">Start Date</label>
+
+                            <div class="col-sm-9">
+                                <div class="input-group date">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input type="date" class="form-control pull-left" id="dtpStartDate" style="width:242px">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.col-md-12 -->
+                        <div class="form-group col-md-12">
+                            <label for="dtpContractDate" class="col-sm-2 col-md-3 control-label">Contract Date</label>
+
+                            <div class="col-sm-9">
+                                <div class="input-group date">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input type="date" class="form-control pull-left" id="dtpContractDate" style="width:242px">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.col-md-12 -->
+                        <div class="form-group col-md-12">
+                            <label for="selectStatus" class="col-sm-2 col-md-3 col control-label">Status</label>
+
+                            <div class="col-sm-9">
+                                <select class="form-control" id="selectStatus">
+                                    <option>Status 1</option>
+                                    <option>Status 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- /.col-md-12 -->
+                         <div class="form-group col-md-12">
+                            <label for="selectStatus" class="col-sm-2 col-md-3 col control-label">Note</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" id="selectStatus" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <!-- /.col-md-12 -->
+                    </div>
+                    <!-- /.col-md-6 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+                <div class="row justify-content-around">
+                    <div class="col-sm-2">
+                        <button type="submit" class="btn btn-default" id="btnClear">Delete</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <button type="submit" class="btn btn-success" id="btnSave">Save</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.box-footer -->
+        </div>
+    </form>
+
+
+    <!-- /.box -->
+    <div class="container">
+        <div class="row mt-2">
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.Label("No")
+                    </th>
+                    <th>
+                        @Html.Label("Student ID")
+                    </th>
+                    <th>
+                        @Html.Label("Start Date")
+                    </th>
+                    <th>
+                        @Html.Label("Contract Date")
+                    </th>
+                    <th>
+                        @Html.Label("Status")
+                    </th>
+                    <th>
+                        @Html.Label("Note")
+                    </th>
+                    
+                </tr>
+                <tbody id="dataTable"></tbody>
+            </table>
+        </div>
+    </div>
+
