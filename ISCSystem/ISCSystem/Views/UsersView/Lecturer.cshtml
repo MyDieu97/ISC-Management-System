@@ -16,7 +16,7 @@
                 <input id="id" hidden />
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
-                        <div class="form-group col-md-12 col-md-12">
+                        <div class="form-group col-md-12">
                             <label for="txtLastName" class="col-sm-2 col-md-3 col control-label">Last Name</label>
 
                             <div class="col-sm-9">
@@ -24,7 +24,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group col-md-12 col-md-12">
+                        <div class="form-group col-md-12">
                             <label for="txtFirstName" class="col-sm-2 col-md-3 col control-label">First Name</label>
 
                             <div class="col-sm-9">
@@ -32,7 +32,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group col-md-12 col-md-12">
+                        <div class="form-group col-md-12">
                             <label for="gender" class="col-sm-2 col-md-3 col control-label">Gender</label>
 
                             <div class="col-sm-9">
@@ -41,7 +41,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group col-md-12 col-md-12">
+                        <div class="form-group col-md-12">
                             <label for="datepicker" class="col-sm-2 col-md-3 control-label">Date of birth</label>
 
                             <div class="col-sm-9">
@@ -121,9 +121,12 @@
 
 </div>
 <!-- /.box -->
-<div class="container">
-    <div class="row mt-2">
-        <table class="table">
+<div class="box">
+    <div class="box-header with-border">
+        <h3 class="box-title">Lecturer Table</h3>
+    </div>
+    <div class="box-body">
+        <table class="table table-border">
             <tr>
                 <th>
                     @Html.Label("No")
@@ -156,7 +159,23 @@
 
                 </th>
             </tr>
-            <tbody id="dataTable"></tbody>
+            <tbody id="dataTable">
+                <tr>
+                    <td>1</td>
+                    <td>Tran Nguyen Thanh</td>
+                    <td>Huy</td>
+                    <td>Dr. Phil</td>
+                    <td>Male</td>
+                    <td>05/05/1987</td>
+                    <td>23 CMT8, District 1, HCMC</td>
+                    <td>huytran87@gmail.com</td>
+                    <td>0123456789</td>
+                    <td>
+                        <button class="btn btn-warning">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     </div>
 </div>

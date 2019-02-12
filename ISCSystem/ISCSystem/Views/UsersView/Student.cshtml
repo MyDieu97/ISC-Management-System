@@ -146,45 +146,69 @@
     </form>
 
 
-    <!-- /.box -->
-    <div class="container">
-        <div class="row mt-2">
-            <table class="table">
-                <tr>
-                    <th>
-                        @Html.Label("No")
-                    </th>
-                    <th>
-                        @Html.Label("Last Name")
-                    </th>
-                    <th>
-                        @Html.Label("First Name")
-                    </th>
-                    <th>
-                        @Html.Label("Gender")
-                    </th>
-                    <th>
-                        @Html.Label("Date of Birth")
-                    </th>
-                    <th>
-                        @Html.Label("University")
-                    </th>
-                    <th>
-                        @Html.Label("Address")
-                    </th>
-                    <th>
-                        @Html.Label("Email")
-                    </th>
-                    <th>
-                        @Html.Label("Phone")
-                    </th>
-                    <th>
+    <!-- /.box -->    
+</div>
 
-                    </th>
+<div class="box">
+    <div class="box-header with-border">
+        <h3 class="box-title">Student Table</h3>
+    </div>
+    <div class="box-body">
+        <table class="table table-border">
+            <tr>
+                <th>
+                    @Html.Label("No")
+                </th>
+                <th>
+                    @Html.Label("Last Name")
+                </th>
+                <th>
+                    @Html.Label("First Name")
+                </th>
+                <th>
+                    @Html.Label("University")
+                </th>
+                <th>
+                    @Html.Label("Major")
+                </th>
+                <th>
+                    @Html.Label("Gender")
+                </th>
+                <th>
+                    @Html.Label("Date of Birth")
+                </th>
+                <th>
+                    @Html.Label("Address")
+                </th>
+                <th>
+                    @Html.Label("Email")
+                </th>
+                <th>
+                    @Html.Label("Phone")
+                </th>
+                <th>
+
+                </th>
+            </tr>
+            <tbody id="dataTable">
+                <tr>
+                    <td>1</td>
+                    <td>Tran Nguyen Thanh</td>
+                    <td>Huy</td>
+                    <td>University of economics HCMC</td>
+                    <td>E-Commerce</td>
+                    <td>Male</td>
+                    <td>05/05/1987</td>
+                    <td>23 CMT8, District 1, HCMC</td>
+                    <td>huytran87@gmail.com</td>
+                    <td>0123456789</td>
+                    <td>
+                        <button class="btn btn-warning">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
                 </tr>
-                <tbody id="dataTable"></tbody>
-            </table>
-        </div>
+            </tbody>
+        </table>
     </div>
 </div>
 

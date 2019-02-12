@@ -17,21 +17,21 @@
                 <input id="id" hidden />
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group col-md-12">
                             <label for="txtClassName" class="col-sm-2 col-md-3 col control-label">Class Name</label>
 
                             <div class="col-sm-9">
                                 <input type="text" class="form-control" id="txtClassName" placeholder="">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group col-md-12">
                             <label for="txtPercentBanTest" class="col-sm-2 col-md-3 col control-label">Percent ban test</label>
 
                             <div class="col-sm-9">
                                 <input type="number" min="0" max="100" class="form-control" id="txtPercentBanTest" placeholder="" />
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group col-md-12">
                             <label for="txtPassingScore" class="col-sm-2 col-md-3 col control-label">Passing Score</label>
 
                             <div class="col-sm-9">
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group col-md-12">
                             <label for="drnSubject" class="col-sm-2 col-md-3 control-label">Subject</label>
 
                             <div class="col-sm-9">
@@ -48,7 +48,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group col-md-12">
                             <label for="drnCourse" class="col-sm-2 col-md-3 control-label">Course</label>
 
                             <div class="col-sm-9">
@@ -56,7 +56,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group col-md-12">
                             <label for="drnLecturer" class="col-sm-2 col-md-3 control-label">Lecturer</label>
 
                             <div class="col-sm-9">
@@ -83,39 +83,53 @@
     </form>
 </div>
 <!-- /.box -->
-<div class="container">
-    <div class="row mt-2">
-        <table class="table">
+<div class="box">
+    <div class="box-header with-border">
+        <h3 class="box-title">Student Table</h3>
+    </div>
+    <div class="box-body">
+        <table class="table table-border">
             <tr>
                 <th>
                     @Html.Label("No")
                 </th>
                 <th>
-                    @Html.Label("Last Name")
+                    @Html.Label("Class Name")
                 </th>
                 <th>
-                    @Html.Label("First Name")
+                    @Html.Label("Course")
                 </th>
                 <th>
-                    @Html.Label("Gender")
+                    @Html.Label("Subject")
                 </th>
                 <th>
-                    @Html.Label("Date of Birth")
+                    @Html.Label("Lecturer")
                 </th>
                 <th>
-                    @Html.Label("Address")
+                    @Html.Label("Percent of ban test")
                 </th>
                 <th>
-                    @Html.Label("Email")
-                </th>
-                <th>
-                    @Html.Label("Phone")
+                    @Html.Label("Passing score")
                 </th>
                 <th>
 
                 </th>
             </tr>
-            <tbody id="dataTable"></tbody>
+            <tbody id="dataTable">
+                <tr>
+                    <td>1</td>
+                    <td>FE07</td>
+                    <td>Intake07</td>
+                    <td>Frond-end</td>
+                    <td>Tran Thanh Duy</td>
+                    <td>20%</td>
+                    <td>60</td>
+                    <td>
+                        <button class="btn btn-warning">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     </div>
 </div>
