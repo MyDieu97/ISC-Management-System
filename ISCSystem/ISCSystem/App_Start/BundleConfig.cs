@@ -23,7 +23,8 @@ using System.Web.Optimization;
                       "~/Content/admin-lte/js/bootstrap.min.js",
                       "~/Content/admin-lte/js/adminlte.min.js",
                       "~/Content/admin-lte/js/icheck.min.js",
-                      "~/Script/toastr.min.js"));
+                      "~/Script/toastr.min.js",
+                      "~/Content/admin-lte/bower_component/select2/dist/js/select2.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/site.css",
@@ -33,7 +34,8 @@ using System.Web.Optimization;
                       "~/Content/admin-lte/css/AdminLTE.min.css",
                       "~/Content/admin-lte/css/skin-blue.min.css",
                       "~/Content/admin-lte/css/blue.css",
-                      "~/Content/toastr.min.css"));
+                      "~/Content/toastr.min.css",
+                      "~/Content/admin-lte/bower_component/select2/dist/css/select2.css"));
         }
     }
 
