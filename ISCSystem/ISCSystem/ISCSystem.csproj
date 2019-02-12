@@ -741,6 +741,11 @@
     <Content Include="Views\UsersView\Index.cshtml" />
     <Content Include="Views\Shared\_LoginLayout.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Diệu\Class.cshtml" />
+    <Content Include="Views\Diệu\Lecturer.cshtml" />
+    <Content Include="Views\Diệu\Major.cshtml" />
+    <Content Include="Views\Diệu\Student.cshtml" />
+    <Content Include="Views\Diệu\University.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
