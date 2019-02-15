@@ -211,12 +211,9 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CoursesViewController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\SpecializedTrainingsViewController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\UsersViewController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -4017,8 +4014,8 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\SpecializedTrainingsView\Index.cshtml" />
-    <Content Include="Views\CoursesView\Index.cshtml" />
+    <Content Include="Views\UsersView\SpecializedTrainings.cshtml" />
+    <Content Include="Views\UsersView\Courses.cshtml" />
     <Content Include="Views\Diệu\Companies.cshtml" />
     <Content Include="Views\Diệu\Lecturer.cshtml" />
     <Content Include="Views\Diệu\Student.cshtml" />
@@ -4027,10 +4024,10 @@
     <Content Include="Views\UsersView\Companies.cshtml" />
     <Content Include="Views\UsersView\Subjects.cshtml" />
     <Content Include="Views\UsersView\WorkTrack.cshtml" />
-    <Content Include="Views\UsersView\Class.cshtml" />
-    <Content Include="Views\UsersView\Lecturer.cshtml" />
-    <Content Include="Views\UsersView\Student.cshtml" />
-    <Content Include="Views\UsersView\University.cshtml" />
+    <Content Include="Views\UsersView\Classes.cshtml" />
+    <Content Include="Views\UsersView\Lecturers.cshtml" />
+    <Content Include="Views\UsersView\Students.cshtml" />
+    <Content Include="Views\UsersView\Universities.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

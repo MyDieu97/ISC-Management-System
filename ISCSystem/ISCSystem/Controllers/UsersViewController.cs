@@ -14,27 +14,22 @@ namespace ISCSystem.Controllers
             return View();
         }
 
-        public ActionResult Student()
+        public ActionResult Students()
         {
             return View();
         }
 
-        public ActionResult Lecturer()
+        public ActionResult Lecturers()
         {
             return View();
         }
 
-        public ActionResult University()
+        public ActionResult Universities()
         {
             return View();
         }
-
-        public ActionResult Major()
-        {
-            return View();
-        }
-
-        public ActionResult Class()
+        
+        public ActionResult Classes()
         {
             return View();
         }
@@ -54,5 +49,14 @@ namespace ISCSystem.Controllers
             return View();
         }
 
+        public ActionResult Courses()
+        {
+            return View();
+        }
+
+        public ActionResult SpecializedTrainings()
+        {
+            return View();
+        }
     }
 }
