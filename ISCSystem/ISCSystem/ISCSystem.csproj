@@ -4028,6 +4028,10 @@
     <Content Include="Views\UsersView\Companies.cshtml" />
     <Content Include="Views\UsersView\WorkTrack.cshtml" />
     <Content Include="Views\UsersView\Subjects.cshtml" />
+    <Content Include="Views\UsersView\AddTimeTable.cshtml" />
+    <Content Include="Views\UsersView\ClassRoom.cshtml" />
+    <Content Include="Views\UsersView\LearningResult.cshtml" />
+    <Content Include="Views\UsersView\TimeTable.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
