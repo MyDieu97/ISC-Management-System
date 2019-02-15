@@ -6,56 +6,151 @@
 
 
 <script src="~/Content/admin-lte/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<div class="box box-info">
-    <div class="box-header with-border">
-        <h3 class="box-title">Create new university</h3>
-    </div>
-    <!-- /.box-header -->
-    <!-- form start -->
-    <form>
-        <div class="container">
-            <div class="box-body">
-                <input id="id" hidden />
-                <div class="row">
-                    <div class="col-sm-12 col-md-6">
-                        <div class="form-group col-md-12 col-md-12">
-                            <label for="txtUniversityName" class="col-sm-2 col-md-3 col control-label">University Name</label>
 
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="txtUniversityName" placeholder="">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">University</h3>
+                </div>
+                <!-- /.box-header -->
+                <!-- form start -->
+                <form>
+                    <div class="box-body">
+                        <input id="id" hidden />
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12">
+                                <div class="row">
+                                    <div class="form-group col-sm-12 col-md-12">
+                                        <label for="txtUniversityName" class="col-sm-4 col-md-4 col control-label">University Name</label>
+
+                                        <div class="col-sm-10 col-md-9">
+                                            <input type="text" class="form-control" id="txtUniversityName" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+                        <div class="row justify-content-around">
+                            <div class="col-sm-2">
+                                <button type="submit" class="btn btn-default" id="btnClear">Delete</button>
+                            </div>
+                            <div class="col-sm-2">
+                                <button type="submit" class="btn btn-success" id="btnSave">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.box-footer -->
+                </form>
+            </div>
+
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">University Table</h3>
+                </div>
+                <div class="box-body">
+                    <table class="table table-border">
+                        <tr>
+                            <th>
+                                @Html.Label("No")
+                            </th>
+                            <th>
+                                @Html.Label("University Name")
+                            </th>
+                            <th>
+
+                            </th>
+                        </tr>
+                        <tbody id="dataTable">
+                            <tr>
+                                <td>1</td>
+                                <td>University of Economics Ho Chi Minh City</td>
+                                <td>
+                                    <button class="btn btn-warning">Edit</button>
+                                    <button class="btn btn-danger">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <!-- /.box-body -->
-            <div class="box-footer">
-                <div class="row justify-content-around">
-                    <div class="col-sm-2">
-                        <button type="submit" class="btn btn-default" id="btnClear">Delete</button>
-                    </div>
-                    <div class="col-sm-4">
-                        <button type="submit" class="btn btn-success" id="btnSave">Save</button>
-                    </div>
-                </div>
-            </div>
-            <!-- /.box-footer -->
         </div>
-    </form>
-</div>
-<!-- /.box -->
-<div class="container">
-    <div class="row mt-2">
-        <table class="table">
-            <tr>
-                <th>
-                    @Html.Label("No")
-                </th>
-                <th>
-                    @Html.Label("University Name")
-                </th>                
-            </tr>
-            <tbody id="dataTable"></tbody>
-        </table>
+        
+        <div class="col-md-6">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Class</h3>
+                </div>
+                <!-- /.box-header -->
+                <!-- form start -->
+                <form>
+                    <div class="box-body">
+                        <input id="id" hidden />
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12">
+                                <div class="row">
+                                    <div class="form-group col-sm-12 col-md-12">
+                                        <label for="txtMajorName" class="col-sm-4 col-md-4 col control-label">Major Name</label>
+
+                                        <div class="col-sm-10 col-md-9">
+                                            <input type="text" class="form-control" id="txtMajorName" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+                        <div class="row justify-content-around">
+                            <div class="col-sm-2">
+                                <button type="submit" class="btn btn-default" id="btnClear">Delete</button>
+                            </div>
+                            <div class="col-sm-2">
+                                <button type="submit" class="btn btn-success" id="btnSave">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.box-footer -->
+                </form>
+            </div>
+
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Major Table</h3>
+                </div>
+                <div class="box-body">
+                    <table class="table table-border">
+                        <tr>
+                            <th>
+                                @Html.Label("No")
+                            </th>
+                            <th>
+                                @Html.Label("Major Name")
+                            </th>
+                            <th>
+
+                            </th>
+                        </tr>
+                        <tbody id="dataTable">
+                            <tr>
+                                <td>1</td>
+                                <td>E-commerce</td>
+                                <td>
+                                    <button class="btn btn-warning">Edit</button>
+                                    <button class="btn btn-danger">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>        
     </div>
 </div>
+
