@@ -58,5 +58,25 @@ namespace ISCSystem.Controllers
         {
             return View();
         }
+
+        public ActionResult LearningResult()
+        {
+            return View();
+        }
+
+        public ActionResult ClassRoom()
+        {
+            return View();
+        }
+
+        public ActionResult TimeTable()
+        {
+            return View();
+        }
+
+        public ActionResult AddTimeTable()
+        {
+            return View();
+        }
     }
 }
