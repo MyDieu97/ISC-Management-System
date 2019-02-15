@@ -1,0 +1,263 @@
+﻿
+@{
+                /**/
+
+                ViewBag.Title = "Entrance Test";
+}
+
+<h2>Entrance Tests</h2>
+<script src="~/Content/admin-lte/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<div class="box box-info">
+    <div class="box-header with-border">
+        <h3 class="box-title">Create Entrance Test</h3>
+    </div>
+    <form>
+        <div class="container">
+            <div class="box-body">
+                <input id="id" hidden/>
+                <div class="col-sm-12 col-md-5" style="margin-top : 17px;">
+                    <div class="row" style="margin-left: 15px;">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Etrance Test ID</label>
+                            <input type="text" class="form-control" id="txtEntranceTestID" placeholder="Type entrance test ID ...">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left: 15px;">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Course ID</label>
+                            <select class="form-control" id="slCourseID">
+                                <option selected disabled>Select Course</option>
+                                <option>CJV001</option>
+                                <option>CJV002</option>
+                                <option>CDB001</option>
+                                <option>CDB002</option>
+                                <option>CEL001</option>
+                                <option>CEL002</option>
+                                <option>CEL003</option>
+                                <option>CDV001</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-12 col-md-12">
+                            <label for="datepicker" class="col-sm-2 col-md-3 control-label" style="margin-top : 8px" ;>Test Date</label>
+
+                            <div class="col-sm-3">
+                                <div class="input-group date">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input type="date" class="form-control pull-left" id="dtpTestDate">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6" style="margin-left : 12px; margin-top : 17px;">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Examination Subject 1</label>
+                                <select class="form-control" id="slExaminationSubject1">
+                                    <option selected hidden>Select ...</option>
+                                    <option value="0">--</option>
+                                    <option value="1">English</option>
+                                    <option value="2">OOP</option>
+                                    <option value="3">Database</option>
+                                    <option value="4">Math</option>
+                                    <option value="5">Interview</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Passing Score</label>
+                                <input type="text" class="form-control" id="txtPassingCore1" placeholder="Type passing score ...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Examination Subject 2</label>
+                                <select class="form-control" id="slExaminationSubject2">
+                                    <option selected hidden>Select ...</option>
+                                    <option value="0">--</option>
+                                    <option value="1">English</option>
+                                    <option value="2">OOP</option>
+                                    <option value="3">Database</option>
+                                    <option value="4">Math</option>
+                                    <option value="5">Interview</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Passing Score</label>
+                                <input type="text" class="form-control" id="txtPassingScore2" placeholder="Type passing score ...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Examination Subject 3</label>
+                                <select class="form-control" id="slExaminationSubject3">
+                                    <option selected hidden>Select ...</option>
+                                    <option value="0">--</option>
+                                    <option value="1">English</option>
+                                    <option value="2">OOP</option>
+                                    <option value="3">Database</option>
+                                    <option value="4">Math</option>
+                                    <option value="5">Interview</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Passing Score</label>
+                                <input type="text" class="form-control" id="txtPassingCore3" placeholder="Type passing score ...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Examination Subject 4</label>
+                                <select class="form-control" id="slExaminationSubject4">
+                                    <option selected hidden>Select ...</option>
+                                    <option value="0">--</option>
+                                    <option value="1">English</option>
+                                    <option value="2">OOP</option>
+                                    <option value="3">Database</option>
+                                    <option value="4">Math</option>
+                                    <option value="5">Interview</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Passing Core</label>
+                                <input type="text" class="form-control" id="txtPassingCore4" placeholder="Type passing score ...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+         </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <button type="submit" class="btn btn-danger text-cent" id="btnClear"> Delete </button>
+                    <button type="submit" class="btn btn-success" id="btnSave"> Save </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- /.box -->
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title">Entrance Tests List</h3>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+            <div class="row"><div class="col-sm-6"></div><div class="col-sm-6"></div></div><div class="row">
+                <div class="col-sm-3 col-md-12">
+                    <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+                        <thead>
+                            <tr role="row">
+                                <th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending">Entrance Test ID</th>
+                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending">Course ID</th>
+                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1">Test Date</th>
+                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1">Examination Subject 1</th>
+                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1">Examination Subject 2</th>
+                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1">Examination Subject 3</th>
+                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1">Examination Subject 4</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr role="row" class="odd">
+                                <td class="sorting_1">ET001</td>
+                                <td>CJV001</td>
+                                <td>14/5/2019</td>
+                                <td>English</td>
+                                <td>Math</td>
+                                <td>OOP</td>
+                                <td>Interview</td>
+                            </tr>
+
+                            <tr role="row" class="even">
+                                <td class="sorting_1">ET002</td>
+                                <td>CDB002</td>
+                                <td>23/6/2019</td>
+                                <td>Database</td>
+                                <td>English</td>
+                                <td>Math</td>
+                                <td>--</td>
+                            </tr>
+
+                            <tr role="row" class="odd">
+                                <td class="sorting_1">ET003</td>
+                                <td>CEL002</td>
+                                <td>11/7/2019</td>
+                                <td>English</td>
+                                <td>Interview</td>
+                                <td>--</td>
+                                <td>--</td>
+                            </tr>
+
+                            <tr role="row" class="even">
+                                <td class="sorting_1">ET004</td>
+                                <td>CDV001</td>
+                                <td>08/02/2020</td>
+                                <td>OOP</td>
+                                <td>Database</td>
+                                <td>Math</td>
+                                <td>English</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">
+                        Showing 1 to 4 of 4 entries
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+                        <ul class="pagination">
+                            <li class="paginate_button previous disabled" id="example2_previous">
+                                <a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0">Previous</a>
+                            </li>
+                            <li class="paginate_button active">
+                                <a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0">1</a>
+                            </li>
+                            <li class="paginate_button ">
+                                <a href="#" aria-controls="example2" data-dt-idx="2" tabindex="0">2</a>
+                            </li>
+                            <li class="paginate_button ">
+                                <a href="#" aria-controls="example2" data-dt-idx="3" tabindex="0">3</a>
+                            </li>
+                            <li class="paginate_button ">
+                                <a href="#" aria-controls="example2" data-dt-idx="4" tabindex="0">4</a>
+                            </li>
+                            <li class="paginate_button ">
+                                <a href="#" aria-controls="example2" data-dt-idx="5" tabindex="0">5</a>
+                            </li>
+                            <li class="paginate_button ">
+                                <a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0">6</a>
+                            </li>
+                            <li class="paginate_button next" id="example2_next">
+                                <a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0">Next</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>

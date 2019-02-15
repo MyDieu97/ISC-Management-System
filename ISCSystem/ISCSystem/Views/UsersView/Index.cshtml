@@ -1,326 +1,326 @@
 ﻿@{
-	ViewBag.Title = "User";
+    ViewBag.Title = "User";
 }
 
 <h2>User</h2>
 <script src="~/Content/admin-lte/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <div class="box box-info">
-	<div class="box-header with-border">
-		<h3 class="box-title">Tạo người dùng mới</h3>
-	</div>
-	<!-- /.box-header -->
-	<!-- form start -->
-	<form>
-		<div class="container">
-			<div class="box-body">
-				<input id="id" hidden/>
-				<div class="row">
-					<div class="form-group col-sm-12 col-md-6">
-						<label for="lastName" class="col-sm-2 col-md-2 col control-label">Họ</label>
+    <div class="box-header with-border">
+        <h3 class="box-title">Tạo người dùng mới</h3>
+    </div>
+    <!-- /.box-header -->
+    <!-- form start -->
+    <form>
+        <div class="container">
+            <div class="box-body">
+                <input id="id" hidden />
+                <div class="row">
+                    <div class="form-group col-sm-12 col-md-6">
+                        <label for="lastName" class="col-sm-2 col-md-2 col control-label">Họ</label>
 
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="txtLastName" placeholder="Nhập họ">
-						</div>
-					</div>
-					<div class="form-group col-sm-12 col-md-6">
-						<label for="txtEmail" class="col-sm-2 col-md-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="txtLastName" placeholder="Nhập họ">
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12 col-md-6">
+                        <label for="txtEmail" class="col-sm-2 col-md-2 control-label">Email</label>
 
-						<div class="col-sm-10">
-							<input type="email" class="form-control" id="txtEmail" placeholder="Nhập email">
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="form-group col-sm-12 col-md-6">
-						<label for="lastName" class="col-sm-2 col-md-2 col control-label">Tên</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="txtEmail" placeholder="Nhập email">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-12 col-md-6">
+                        <label for="lastName" class="col-sm-2 col-md-2 col control-label">Tên</label>
 
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="txtFirstName" placeholder="Nhập tên">
-						</div>
-					</div>
-					
-					<div class="form-group col-sm-12 col-md-6">
-						<label for="datepicker" class="col-sm-2 col-md-2 control-label">Ngày sinh</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="txtFirstName" placeholder="Nhập tên">
+                        </div>
+                    </div>
 
-						<div class="col-sm-10 col-md-4">
-							<div class="input-group date">
-								<div class="input-group-addon">
-									<i class="fa fa-calendar"></i>
-								</div>
-								<input type="date" class="form-control pull-left" id="dtpDateofBirth">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="form-group col-sm-12 col-md-6">
-						<label for="gender" class="col-sm-2 col-md-2 col control-label">Giới tính</label>
+                    <div class="form-group col-sm-12 col-md-6">
+                        <label for="datepicker" class="col-sm-2 col-md-2 control-label">Ngày sinh</label>
 
-						<div class="col-sm-10 col-md-4">
-							<input type="radio" name="gender" value="male" checked> Nam
-							<input type="radio" name="gender" value="female"> Nữ
-						</div>
-					</div>				
-					<div class="form-group col-sm-12 col-md-6">
-						<label for="txtPhone" class="col-sm-2 col-md-2 control-label">SDT</label>
+                        <div class="col-sm-10 col-md-4">
+                            <div class="input-group date">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="date" class="form-control pull-left" id="dtpDateofBirth">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-12 col-md-6">
+                        <label for="gender" class="col-sm-2 col-md-2 col control-label">Giới tính</label>
 
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="txtPhone" placeholder="Tối đa 12 chữ số">
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="form-group col-sm-12 col-md-6">
-						<label for="txtAddress" class="col-sm-2 col-md-2 control-label">Địa chỉ</label>
+                        <div class="col-sm-10 col-md-4">
+                            <input type="radio" name="gender" value="male" checked> Nam
+                            <input type="radio" name="gender" value="female"> Nữ
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12 col-md-6">
+                        <label for="txtPhone" class="col-sm-2 col-md-2 control-label">SDT</label>
 
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="txtAddress" placeholder="Nhập địa chỉ">
-						</div>
-					</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="txtPhone" placeholder="Tối đa 12 chữ số">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-12 col-md-6">
+                        <label for="txtAddress" class="col-sm-2 col-md-2 control-label">Địa chỉ</label>
 
-				</div>
-			</div>
-			<!-- /.box-body -->
-			<div class="box-footer">
-				<div class="row justify-content-around">
-					<div class="col-sm-2">
-						<button type="submit" class="btn btn-default" id="btnClear">Xóa</button>
-					</div>
-					<div class="col-sm-4">
-						<button type="submit" class="btn btn-info" id="btnCreate">Tạo</button>
-						<button type="submit" class="btn btn-success" id="btnSave">Cập Nhật</button>
-					</div>
-				</div>			
-			</div>
-			<!-- /.box-footer -->
-		</div>
-	</form>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="txtAddress" placeholder="Nhập địa chỉ">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+                <div class="row justify-content-around">
+                    <div class="col-sm-2">
+                        <button type="submit" class="btn btn-default" id="btnClear">Xóa</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <button type="submit" class="btn btn-info" id="btnCreate">Tạo</button>
+                        <button type="submit" class="btn btn-success" id="btnSave">Cập Nhật</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.box-footer -->
+        </div>
+    </form>
 </div>
 <!-- /.box -->
 <div class="container">
-	<div class="row mt-2">
-		<table class="table">
-			<tr>
-				<th>
-					@Html.Label("No")
-				</th>
-				<th>
-					@Html.Label("Last Name")
-				</th>
-				<th>
-					@Html.Label("First Name")
-				</th>
-				<th>
-					@Html.Label("Gender")
-				</th>
-				<th>
-					@Html.Label("Date of Birth")
-				</th>
-				<th>
-					@Html.Label("Address")
-				</th>
-				<th>
-					@Html.Label("Email")
-				</th>
-				<th>
-					@Html.Label("Phone")
-				</th>
-				<th>
+    <div class="row mt-2">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.Label("No")
+                </th>
+                <th>
+                    @Html.Label("Last Name")
+                </th>
+                <th>
+                    @Html.Label("First Name")
+                </th>
+                <th>
+                    @Html.Label("Gender")
+                </th>
+                <th>
+                    @Html.Label("Date of Birth")
+                </th>
+                <th>
+                    @Html.Label("Address")
+                </th>
+                <th>
+                    @Html.Label("Email")
+                </th>
+                <th>
+                    @Html.Label("Phone")
+                </th>
+                <th>
 
-				</th>
-			</tr>
-			<tbody id="dataTable"></tbody>
-		</table>
-	</div>
+                </th>
+            </tr>
+            <tbody id="dataTable"></tbody>
+        </table>
+    </div>
 </div>
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
 <script>
-	var uri = '../api/Users';
+    var uri = '../api/Users';
 
-	$(document).ready(function () {
-		getData();
+    $(document).ready(function () {
+        getData();
 
-		$('#btnCreate').click(function () {
-			addUser();
-		})
+        $('#btnCreate').click(function () {
+            addUser();
+        })
 
-		$('#btnSave').click(function () {
-			editUser($("#id").val());
-		})
-	});
+        $('#btnSave').click(function () {
+            editUser($("#id").val());
+        })
+    });
 
-	function getData() {
-		const tBody = $("#dataTable");
-		var num = 0;
-		$(tBody).empty();
+    function getData() {
+        const tBody = $("#dataTable");
+        var num = 0;
+        $(tBody).empty();
 
-		// Send an AJAX request
-		$.getJSON(uri)
-			.done(function (data) {
-				// On success, 'data' contains a list of products.
-				$.each(data, function (key, item) {
-					const tr = $("<tr></tr>")
-						.append(
-						$("<td></td>").append(
-							$("<p>").text(++num)
-							)
-						)
-						.append(
-							$("<td></td>").append(
-								$("<p>").text(item.LastName)
-							)
-						)
-						.append(
-							$("<td></td>").append(
-								$("<p>").text(item.FirstName)
-							)
-						)
-						.append(
-							$("<td></td>").append(
-								$("<p>").text(function () {
-									if (item.Gender == 1)
-										return "Female";
-									else return "Male";
-								}))
-						)
-						.append(
-							$("<td></td>").append(
-								$("<p>").text(item.DoB)
-							)
-						)
-						.append(
-							$("<td></td>").append(
-								$("<p>").text(item.Address)
-							)
-						)
-						.append(
-							$("<td></td>").append(
-								$("<p>").text(item.Email)
-							)
-						)
-						.append(
-							$("<td></td>").append(
-								$("<p>").text(item.Phone)
-							)
-						)
-						.append(
-						$("<td></td>").append(
-							$("<button>Delete</button>").addClass("btn btn-danger").val(item.UserID).on("click", function () {
-								deleteUser($(this).val);
-								})
-							)
-						)
-						.append(
-							$("<td></td>").append(
-							$("<button>Edit</button>").addClass("btn btn-warning").val(item.UserID).on("click", function () {
-								getUser($(this).val());
-								})
-							)
-						);
-					tr.appendTo(tBody);
-				});
-			})
-	}
+        // Send an AJAX request
+        $.getJSON(uri)
+            .done(function (data) {
+                // On success, 'data' contains a list of products.
+                $.each(data, function (key, item) {
+                    const tr = $("<tr></tr>")
+                        .append(
+                            $("<td></td>").append(
+                                $("<p>").text(++num)
+                            )
+                        )
+                        .append(
+                            $("<td></td>").append(
+                                $("<p>").text(item.LastName)
+                            )
+                        )
+                        .append(
+                            $("<td></td>").append(
+                                $("<p>").text(item.FirstName)
+                            )
+                        )
+                        .append(
+                            $("<td></td>").append(
+                                $("<p>").text(function () {
+                                    if (item.Gender == 1)
+                                        return "Female";
+                                    else return "Male";
+                                }))
+                        )
+                        .append(
+                            $("<td></td>").append(
+                                $("<p>").text(item.DoB)
+                            )
+                        )
+                        .append(
+                            $("<td></td>").append(
+                                $("<p>").text(item.Address)
+                            )
+                        )
+                        .append(
+                            $("<td></td>").append(
+                                $("<p>").text(item.Email)
+                            )
+                        )
+                        .append(
+                            $("<td></td>").append(
+                                $("<p>").text(item.Phone)
+                            )
+                        )
+                        .append(
+                            $("<td></td>").append(
+                                $("<button>Delete</button>").addClass("btn btn-danger").val(item.UserID).on("click", function () {
+                                    deleteUser($(this).val);
+                                })
+                            )
+                        )
+                        .append(
+                            $("<td></td>").append(
+                                $("<button>Edit</button>").addClass("btn btn-warning").val(item.UserID).on("click", function () {
+                                    getUser($(this).val());
+                                })
+                            )
+                        );
+                    tr.appendTo(tBody);
+                });
+            })
+    }
 
-	function addUser() {
+    function addUser() {
 
-		//var arrTime = $("#dtpDateofBirth").val().split("-");
-		//Nếu ngày mặc định là tháng ngày năm thì sửa thành:
-		//newFormat = arrTime[2] + "-" + arrTime[1] + "-" + arrTime[0];
-		//var newFormat = arrTime[2] + "-" + arrTime[0] + "-" + arrTime[1];
-		var gender = $("input:checked").val() == "female" ? 1 : 2;
-		const item = {
-			FirstName: $("#txtFirstName").val(),
-			LastName: $("#txtLastName").val(),
-			Gender: gender,
-			Address: $("#txtAddress").val(),
-			DoB: $("#dtpDateofBirth").val(),
-			Email: $("#txtEmail").val(),
-			Phone: $("#txtPhone").val(),
-		};
+        //var arrTime = $("#dtpDateofBirth").val().split("-");
+        //Nếu ngày mặc định là tháng ngày năm thì sửa thành:
+        //newFormat = arrTime[2] + "-" + arrTime[1] + "-" + arrTime[0];
+        //var newFormat = arrTime[2] + "-" + arrTime[0] + "-" + arrTime[1];
+        var gender = $("input:checked").val() == "female" ? 1 : 2;
+        const item = {
+            FirstName: $("#txtFirstName").val(),
+            LastName: $("#txtLastName").val(),
+            Gender: gender,
+            Address: $("#txtAddress").val(),
+            DoB: $("#dtpDateofBirth").val(),
+            Email: $("#txtEmail").val(),
+            Phone: $("#txtPhone").val(),
+        };
 
-		$.ajax({
-			type: "POST",
-			accepts: "application/json",
-			url: uri,
-			contentType: "application/json",
-			data: JSON.stringify(item),
-			error: function () {
-				alert("Something went wrong!");
-			},
-			success: function (result) {
-				getData();
-				$("#txtFirstName").val(""),
-					$("#txtLastName").val(""),
-					$("input:checked").val(""),
-					$("#txtAddress").val(""),
-					$("#dtpDateofBirth").val(""),
-					$("#txtEmail").val(""),
-					$("#txtPhone").val("")
-			}
-		});
-	}
+        $.ajax({
+            type: "POST",
+            accepts: "application/json",
+            url: uri,
+            contentType: "application/json",
+            data: JSON.stringify(item),
+            error: function () {
+                alert("Something went wrong!");
+            },
+            success: function (result) {
+                getData();
+                $("#txtFirstName").val(""),
+                    $("#txtLastName").val(""),
+                    $("input:checked").val(""),
+                    $("#txtAddress").val(""),
+                    $("#dtpDateofBirth").val(""),
+                    $("#txtEmail").val(""),
+                    $("#txtPhone").val("")
+            }
+        });
+    }
 
-	function deleteUser(id) {
-		$.ajax({
-			url: uri + "/" + id,
-			type: "DELETE",
-			success: function (result) {
-				getData();
-			}
-		});
-	}
+    function deleteUser(id) {
+        $.ajax({
+            url: uri + "/" + id,
+            type: "DELETE",
+            success: function (result) {
+                getData();
+            }
+        });
+    }
 
-	function editUser(id) {
-		//var arrTime = $("#dtpDateofBirth").val().split("-");
-		//var newFormat = arrTime[2] + "-" + arrTime[1] + "-" + arrTime[0];
-		var gender = $("input:checked").val() == "female" ? 1 : 2;
-		const item = {
-			UserID: $("#id").val(),
-			FirstName: $("#txtFirstName").val(),
-			LastName: $("#txtLastName").val(),
-			Gender: gender,
-			Address: $("#txtAddress").val(),
-			DoB: $("#dtpDateofBirth").val(),
-			Email: $("#txtEmail").val(),
-			Phone: $("#txtPhone").val(),
-		};
-		$.ajax({
-			url: uri + "/" + id,
-			type: "PUT",
-			accepts: "application/json",
-			contentType: "application/json",
-			data: JSON.stringify(item),
-			success: function (result) {
-				getData();
-				$("#id").val("");
-				$("#txtFirstName").val("");
-				$("#txtLastName").val("");
-				$("input:checked").val("");
-				$("#txtAddress").val("");
-				$("#dtpDateofBirth").val("");
-				$("#txtEmail").val("");
-				$("#txtPhone").val("");
-			}
-		});
-	}
+    function editUser(id) {
+        //var arrTime = $("#dtpDateofBirth").val().split("-");
+        //var newFormat = arrTime[2] + "-" + arrTime[1] + "-" + arrTime[0];
+        var gender = $("input:checked").val() == "female" ? 1 : 2;
+        const item = {
+            UserID: $("#id").val(),
+            FirstName: $("#txtFirstName").val(),
+            LastName: $("#txtLastName").val(),
+            Gender: gender,
+            Address: $("#txtAddress").val(),
+            DoB: $("#dtpDateofBirth").val(),
+            Email: $("#txtEmail").val(),
+            Phone: $("#txtPhone").val(),
+        };
+        $.ajax({
+            url: uri + "/" + id,
+            type: "PUT",
+            accepts: "application/json",
+            contentType: "application/json",
+            data: JSON.stringify(item),
+            success: function (result) {
+                getData();
+                $("#id").val("");
+                $("#txtFirstName").val("");
+                $("#txtLastName").val("");
+                $("input:checked").val("");
+                $("#txtAddress").val("");
+                $("#dtpDateofBirth").val("");
+                $("#txtEmail").val("");
+                $("#txtPhone").val("");
+            }
+        });
+    }
 
-	function getUser(id) {
-		$.getJSON(uri + "/" + id)
-			.done(function (data) {
-				console.log(data);
-				$("#id").val(data.UserID);
-				$("#txtFirstName").val(data.FirstName);
-				$("#txtLastName").val(data.LastName);
-				if (data.Gender == 1)
-					$("#female").prop('checked', true);
-				else $("#male").prop('checked', true);
-				$("#txtAddress").val(data.Address);
-				$("#dtpDateofBirth").val(data.DoB.substring(0, 10));
-				$("#dateFormat").val(data.DoB);
-				$("#txtEmail").val(data.Email);
-				$("#txtPhone").val(data.Phone);
-			})
-	}
+    function getUser(id) {
+        $.getJSON(uri + "/" + id)
+            .done(function (data) {
+                console.log(data);
+                $("#id").val(data.UserID);
+                $("#txtFirstName").val(data.FirstName);
+                $("#txtLastName").val(data.LastName);
+                if (data.Gender == 1)
+                    $("#female").prop('checked', true);
+                else $("#male").prop('checked', true);
+                $("#txtAddress").val(data.Address);
+                $("#dtpDateofBirth").val(data.DoB.substring(0, 10));
+                $("#dateFormat").val(data.DoB);
+                $("#txtEmail").val(data.Email);
+                $("#txtPhone").val(data.Phone);
+            })
+    }
 </script>

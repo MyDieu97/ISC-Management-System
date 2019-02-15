@@ -1,0 +1,320 @@
+﻿
+@{
+    ViewBag.Title = "Examination Subject";
+}
+
+<h2>Examination Subjects</h2>
+<script src="~/Content/admin-lte/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<div class="box box-info">
+    <div class="box-header with-border">
+        <h3 class="box-title">Create Examination Subject</h3>
+    </div>
+    <form>
+        <div class="container">
+            <div class="box-body">
+                <input id="id" hidden />
+                <div class="row">
+                    <div class="form-group col-sm-12 col-md-6">
+                        <label for="subjectID" class="col-sm-3 col-md-3 col control-label" style="margin-top : 8px;">Subject ID</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="txtSubjectID" placeholder="Type subject ID ...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-12 col-md-6">
+                        <label for="subjectName" class="col-sm-3 col-md-3 col control-label" style="margin-top : 8px;">Subject Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="txtSubjectName" placeholder="Type subject name ...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <button type="submit" class="btn btn-danger text-cent" id="btnClear"> Delete </button>
+                    <button type="submit" class="btn btn-success" id="btnSave"> Save </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- /.box -->
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title">Examination Subjects List</h3>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+            <div class="row"><div class="col-sm-6"></div><div class="col-sm-6"></div></div><div class="row">
+                <div class="col-sm-12">
+                    <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+                        <thead>
+                            <tr role="row">
+                                <th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending">Subject ID</th>
+                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1">Subject Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr role="row" class="odd">
+                                <td class="sorting_1">SJEL</td>
+                                <td>English</td>
+                            </tr>
+                            <tr role="row" class="even">
+                                <td class="sorting_1">SJOOP</td>
+                                <td>OOP</td>
+                            </tr>
+                            <tr role="row" class="odd">
+                                <td class="sorting_1">SJDB</td>
+                                <td>Database</td>
+                            </tr>
+                            <tr role="row" class="even">
+                                <td class="sorting_1">SJIV</td>
+                                <td>Interview</td>
+                            </tr>
+                            <tr role="row" class="odd">
+                                <td class="sorting_1">SJMA</td>
+                                <td>Math</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-sm-5">
+                <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">Showing 1 to 5 of 5 entries
+                </div>
+             </div>
+            <div class="col-sm-7">
+                <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+                    <ul class="pagination">
+                        <li class="paginate_button previous disabled" id="example2_previous">
+                            <a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0">Previous</a>
+                        </li>
+                        <li class="paginate_button active">
+                            <a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0">1</a>
+                        </li>
+                        <li class="paginate_button ">
+                            <a href="#" aria-controls="example2" data-dt-idx="2" tabindex="0">2</a>
+                         </li>
+                        <li class="paginate_button ">
+                            <a href="#" aria-controls="example2" data-dt-idx="3" tabindex="0">3</a>
+                        </li>
+                        <li class="paginate_button ">
+                            <a href="#" aria-controls="example2" data-dt-idx="4" tabindex="0">4</a>
+                        </li>
+                        <li class="paginate_button ">
+                            <a href="#" aria-controls="example2" data-dt-idx="5" tabindex="0">5</a>
+                        </li>
+                        <li class="paginate_button ">
+                            <a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0">6</a>
+                        </li>
+                        <li class="paginate_button next" id="example2_next">
+                        <a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0">Next</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- /.box-body -->
+</div>
+
+
+@*
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script>
+        var uri = '../api/Users';
+
+        $(document).ready(function () {
+            getData();
+
+            $('#btnCreate').click(function () {
+                addUser();
+            })
+
+            $('#btnSave').click(function () {
+                editUser($("#id").val());
+            })
+        });
+
+        function getData() {
+            const tBody = $("#dataTable");
+            var num = 0;
+            $(tBody).empty();
+
+            // Send an AJAX request
+            $.getJSON(uri)
+                .done(function (data) {
+                    // On success, 'data' contains a list of products.
+                    $.each(data, function (key, item) {
+                        const tr = $("<tr></tr>")
+                            .append(
+                                $("<td></td>").append(
+                                    $("<p>").text(++num)
+                                )
+                            )
+                            .append(
+                                $("<td></td>").append(
+                                    $("<p>").text(item.LastName)
+                                )
+                            )
+                            .append(
+                                $("<td></td>").append(
+                                    $("<p>").text(item.FirstName)
+                                )
+                            )
+                            .append(
+                                $("<td></td>").append(
+                                    $("<p>").text(function () {
+                                        if (item.Gender == 1)
+                                            return "Female";
+                                        else return "Male";
+                                    }))
+                            )
+                            .append(
+                                $("<td></td>").append(
+                                    $("<p>").text(item.DoB)
+                                )
+                            )
+                            .append(
+                                $("<td></td>").append(
+                                    $("<p>").text(item.Address)
+                                )
+                            )
+                            .append(
+                                $("<td></td>").append(
+                                    $("<p>").text(item.Email)
+                                )
+                            )
+                            .append(
+                                $("<td></td>").append(
+                                    $("<p>").text(item.Phone)
+                                )
+                            )
+                            .append(
+                                $("<td></td>").append(
+                                    $("<button>Delete</button>").addClass("btn btn-danger").val(item.UserID).on("click", function () {
+                                        deleteUser($(this).val);
+                                    })
+                                )
+                            )
+                            .append(
+                                $("<td></td>").append(
+                                    $("<button>Edit</button>").addClass("btn btn-warning").val(item.UserID).on("click", function () {
+                                        getUser($(this).val());
+                                    })
+                                )
+                            );
+                        tr.appendTo(tBody);
+                    });
+                })
+        }
+
+        function addUser() {
+
+            //var arrTime = $("#dtpDateofBirth").val().split("-");
+            //Nếu ngày mặc định là tháng ngày năm thì sửa thành:
+            //newFormat = arrTime[2] + "-" + arrTime[1] + "-" + arrTime[0];
+            //var newFormat = arrTime[2] + "-" + arrTime[0] + "-" + arrTime[1];
+            var gender = $("input:checked").val() == "female" ? 1 : 2;
+            const item = {
+                FirstName: $("#txtFirstName").val(),
+                LastName: $("#txtLastName").val(),
+                Gender: gender,
+                Address: $("#txtAddress").val(),
+                DoB: $("#dtpDateofBirth").val(),
+                Email: $("#txtEmail").val(),
+                Phone: $("#txtPhone").val(),
+            };
+
+            $.ajax({
+                type: "POST",
+                accepts: "application/json",
+                url: uri,
+                contentType: "application/json",
+                data: JSON.stringify(item),
+                error: function () {
+                    alert("Something went wrong!");
+                },
+                success: function (result) {
+                    getData();
+                    $("#txtFirstName").val(""),
+                        $("#txtLastName").val(""),
+                        $("input:checked").val(""),
+                        $("#txtAddress").val(""),
+                        $("#dtpDateofBirth").val(""),
+                        $("#txtEmail").val(""),
+                        $("#txtPhone").val("")
+                }
+            });
+        }
+
+        function deleteUser(id) {
+            $.ajax({
+                url: uri + "/" + id,
+                type: "DELETE",
+                success: function (result) {
+                    getData();
+                }
+            });
+        }
+
+        function editUser(id) {
+            //var arrTime = $("#dtpDateofBirth").val().split("-");
+            //var newFormat = arrTime[2] + "-" + arrTime[1] + "-" + arrTime[0];
+            var gender = $("input:checked").val() == "female" ? 1 : 2;
+            const item = {
+                UserID: $("#id").val(),
+                FirstName: $("#txtFirstName").val(),
+                LastName: $("#txtLastName").val(),
+                Gender: gender,
+                Address: $("#txtAddress").val(),
+                DoB: $("#dtpDateofBirth").val(),
+                Email: $("#txtEmail").val(),
+                Phone: $("#txtPhone").val(),
+            };
+            $.ajax({
+                url: uri + "/" + id,
+                type: "PUT",
+                accepts: "application/json",
+                contentType: "application/json",
+                data: JSON.stringify(item),
+                success: function (result) {
+                    getData();
+                    $("#id").val("");
+                    $("#txtFirstName").val("");
+                    $("#txtLastName").val("");
+                    $("input:checked").val("");
+                    $("#txtAddress").val("");
+                    $("#dtpDateofBirth").val("");
+                    $("#txtEmail").val("");
+                    $("#txtPhone").val("");
+                }
+            });
+        }
+
+        function getUser(id) {
+            $.getJSON(uri + "/" + id)
+                .done(function (data) {
+                    console.log(data);
+                    $("#id").val(data.UserID);
+                    $("#txtFirstName").val(data.FirstName);
+                    $("#txtLastName").val(data.LastName);
+                    if (data.Gender == 1)
+                        $("#female").prop('checked', true);
+                    else $("#male").prop('checked', true);
+                    $("#txtAddress").val(data.Address);
+                    $("#dtpDateofBirth").val(data.DoB.substring(0, 10));
+                    $("#dateFormat").val(data.DoB);
+                    $("#txtEmail").val(data.Email);
+                    $("#txtPhone").val(data.Phone);
+                })
+        }
+    </script>*@
