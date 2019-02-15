@@ -4021,13 +4021,13 @@
     <Content Include="Views\Diệu\Student.cshtml" />
     <Content Include="Views\Diệu\Subjects.cshtml" />
     <Content Include="Views\Diệu\WorkTrack.cshtml" />
-    <Content Include="Views\UsersView\Companies.cshtml" />
-    <Content Include="Views\UsersView\Subjects.cshtml" />
-    <Content Include="Views\UsersView\WorkTrack.cshtml" />
     <Content Include="Views\UsersView\Classes.cshtml" />
     <Content Include="Views\UsersView\Lecturers.cshtml" />
     <Content Include="Views\UsersView\Students.cshtml" />
     <Content Include="Views\UsersView\Universities.cshtml" />
+    <Content Include="Views\UsersView\Companies.cshtml" />
+    <Content Include="Views\UsersView\WorkTrack.cshtml" />
+    <Content Include="Views\UsersView\Subjects.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
