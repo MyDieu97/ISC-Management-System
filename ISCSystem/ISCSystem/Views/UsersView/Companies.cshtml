@@ -1,12 +1,13 @@
 ﻿
 @{
     ViewBag.Title = "Companies";
-    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>View</h2>
+<link href="~/Content/bootstrap.min.css" type="text/css" />
+<h2>Companies</h2>
 
 <script src="~/Content/admin-lte/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+
 <div class="box box-info">
     <div class="box-header with-border">
         <h3 class="box-title">Create new company</h3>
@@ -15,102 +16,111 @@
     <!-- form start -->
 
     <form>
-        <div class="container">
-            <div class="box-body">
-                <input id="id" hidden />
-                <div class="row">
-                    <div class="col-sm-12 col-md-6">
-                        <div class="form-group col-md-12">
-                            <label for="txtCompanyName" class="col-sm-2 col-md-3 col control-label">Company Name</label>
 
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="txtCompanyName" placeholder="">
-                            </div>
-                        </div>
-                        <!-- /.col-md-12 -->
-                        <div class="form-group col-md-12">
-                            <label for="txtContactEmail" class="col-sm-2 col-md-3 col control-label">Contact Email</label>
+        <div class="container box-body">
+            <input class="row" id="id" hidden />
+            <div class="form-row">
+                <div class="col-sm-12 col-md-6 ">
+                    <div class="form-group col-md-12">
+                        <label for="txtCompanyName" class="col-sm-2 col-md-3 col control-label">Company Name</label>
 
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="txtContactEmail" placeholder="">
-                            </div>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="txtCompanyName" placeholder="">
                         </div>
-                        <!-- /.col-md-12 -->
-                        <div class="form-group col-md-12">
-                            <label for="txtContactPerson" class="col-sm-2 col-md-3 col control-label">Contact Person</label>
-
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="txtContactPerson" placeholder="">
-                            </div>
-                        </div>
-                        <!-- /.col-md-12 -->
-                        <div class="form-group col-md-12">
-                            <label for="txtContactPhone" class="col-sm-2 col-md-3 col control-label">Contact Phone</label>
-
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="txtContactPhone" placeholder="">
-                            </div>
-                        </div>
-                        <!-- /.col-md-12 -->
-                        <div class="form-group col-md-12">
-                            <label for="selectStatus" class="col-sm-2 col-md-3 col control-label">Status</label>
-
-                            <div class="col-sm-9">
-                                <select class="form-control" id="selectStatus">
-                                    <option>Status 1</option>
-                                    <option>Status 2</option>
-                                </select>
-                            </div>
-                        </div>
-                        <!-- /.col-md-12 -->
                     </div>
-                    <!-- /.col-md-6 -->
-                </div>
-                <!-- /.row -->
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer">
-                <div class="row justify-content-around">
-                    <div class="col-sm-2">
-                        <button type="submit" class="btn btn-default" id="btnClear">Delete</button>
+                    <!-- / Company Name -->
+                    <div class="form-group col-md-12">
+                        <label for="txtContactEmail" class="col-sm-2 col-md-3 col control-label">Contact Email</label>
+
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="txtContactEmail" placeholder="">
+                        </div>
                     </div>
-                    <div class="col-sm-4">
-                        <button type="submit" class="btn btn-success" id="btnSave">Save</button>
+                    <!-- / Contact Email -->
+                    <div class="form-group col-md-12">
+                        <label for="txtContactPerson" class="col-sm-2 col-md-3 col control-label">Contact Person</label>
+
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="txtContactPerson" placeholder="">
+                        </div>
                     </div>
+                    <!-- / Contact Person -->
+                    <div class="form-group col-md-12">
+                        <label for="txtContactPhone" class="col-sm-2 col-md-3 col control-label">Contact Phone</label>
+
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="txtContactPhone" placeholder="">
+                        </div>
+                    </div>
+                    <!-- / Contact Phone -->
+                    <div class="form-group col-md-12">
+                        <label for="selectStatus" class="col-sm-2 col-md-3 col control-label">Status</label>
+
+                        <div class="col-sm-9">
+                            <select class="form-control" id="selectStatus">
+                                <option>Status 1</option>
+                                <option>Status 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- / Select Status -->
                 </div>
             </div>
-            <!-- /.box-footer -->
+            <!-- /.row -->
         </div>
+        <!-- /.box-body -->
+
+        <div class="container box-footer">
+            <div class="row">
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <div class="col-md-12">
+                        <div class="col-sm-12">
+                            <button type="submit" class="btn btn-default" id="btnClear">Clear</button>
+                            <button type="submit" class="btn btn-info" id="btnCreate">Create</button>
+                            <button type="submit" class="btn btn-success" id="btnSave">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.box-footer -->
+
     </form>
+</div>
+ <!-- /.box -->
 
-
-    <!-- /.box -->
+<div class="box">
     <div class="container">
         <div class="row mt-2">
             <table class="table">
-                <tr>
-                    <th>
-                        @Html.Label("No")
-                    </th>
-                    <th>
-                        @Html.Label("Company Name")
-                    </th>
-                    <th>
-                        @Html.Label("Contact Email")
-                    </th>
-                    <th>
-                        @Html.Label("Contact Person")
-                    </th>
-                    <th>
-                        @Html.Label("Contact Phone")
-                    </th>
-                    <th>
-                        @Html.Label("Status")
-                    </th>
-                    
-                </tr>
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.Label("No")
+                        </th>
+                        <th>
+                            @Html.Label("Company Name")
+                        </th>
+                        <th>
+                            @Html.Label("Contact Email")
+                        </th>
+                        <th>
+                            @Html.Label("Contact Person")
+                        </th>
+                        <th>
+                            @Html.Label("Contact Phone")
+                        </th>
+                        <th>
+                            @Html.Label("Status")
+                        </th>
+
+                    </tr>
+                </thead>
                 <tbody id="dataTable"></tbody>
             </table>
         </div>
     </div>
+</div>
+
 

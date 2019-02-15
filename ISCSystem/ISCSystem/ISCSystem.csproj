@@ -1092,8 +1092,6 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\dataTables.min.css" />
-    <Content Include="Content\TimeTable.css" />
     <Content Include="Content\toastr.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -3855,7 +3853,6 @@
     <Content Include="Scripts\ckeditor\skins\moono\images\spinner.gif" />
     <Content Include="Scripts\ckeditor\skins\moono\skin.js" />
     <Content Include="Scripts\ckeditor\styles.js" />
-    <Content Include="Scripts\dataTables.min.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
     <Content Include="Scripts\esm\popper.js" />
@@ -4024,17 +4021,13 @@
     <Content Include="Views\Diệu\Student.cshtml" />
     <Content Include="Views\Diệu\Subjects.cshtml" />
     <Content Include="Views\Diệu\WorkTrack.cshtml" />
-    <Content Include="Views\UsersView\Companies.cshtml" />
-    <Content Include="Views\UsersView\Subjects.cshtml" />
-    <Content Include="Views\UsersView\WorkTrack.cshtml" />
     <Content Include="Views\UsersView\Classes.cshtml" />
     <Content Include="Views\UsersView\Lecturers.cshtml" />
     <Content Include="Views\UsersView\Students.cshtml" />
     <Content Include="Views\UsersView\Universities.cshtml" />
-    <Content Include="Views\UsersView\LearningResult.cshtml" />
-    <Content Include="Views\UsersView\ClassRoom.cshtml" />
-    <Content Include="Views\UsersView\TimeTable.cshtml" />
-    <Content Include="Views\UsersView\AddTimeTable.cshtml" />
+    <Content Include="Views\UsersView\Companies.cshtml" />
+    <Content Include="Views\UsersView\WorkTrack.cshtml" />
+    <Content Include="Views\UsersView\Subjects.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

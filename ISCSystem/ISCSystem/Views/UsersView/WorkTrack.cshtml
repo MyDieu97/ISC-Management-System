@@ -1,24 +1,24 @@
 ﻿
 @{
-    ViewBag.Title = "WorkTrack";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Internship";
 }
 
-<h2>View</h2>
-
+<h2>Internship</h2>
+<link href="~/Content/bootstrap.min.css" type="text/css" />
 <script src="~/Content/admin-lte/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+
 <div class="box box-info">
     <div class="box-header with-border">
-        <h3 class="box-title">Create new worktrack</h3>
+        <h3 class="box-title">Create new internship</h3>
     </div>
     <!-- /.box-header -->
     <!-- form start -->
 
     <form>
-        <div class="container">
-            <div class="box-body">
-                <input id="id" hidden />
-                <div class="row">
+        
+            <div class="container box-body">
+                <input class="row" id="id" hidden />
+                <div class="form-row">
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group col-md-12">
                             <label for="txtStudentID" class="col-sm-2 col-md-3 col control-label">Student ID</label>
@@ -27,7 +27,7 @@
                                 <input type="text" class="form-control" id="txtStudentID" placeholder="">
                             </div>
                         </div>
-                        <!-- /.col-md-12 -->
+                        <!-- / Student ID-->
                         <div class="form-group col-md-12">
                             <label for="dtpStartDate" class="col-sm-2 col-md-3 control-label">Start Date</label>
 
@@ -40,7 +40,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- /.col-md-12 -->
+                        <!-- / Start Date -->
                         <div class="form-group col-md-12">
                             <label for="dtpContractDate" class="col-sm-2 col-md-3 control-label">Contract Date</label>
 
@@ -53,73 +53,111 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- /.col-md-12 -->
+                        <!-- / Contract Date -->
                         <div class="form-group col-md-12">
                             <label for="selectStatus" class="col-sm-2 col-md-3 col control-label">Status</label>
 
                             <div class="col-sm-9">
-                                <select class="form-control" id="selectStatus">
-                                    <option>Status 1</option>
-                                    <option>Status 2</option>
-                                </select>
+                                <div class="form-group">
+                                    <select class="form-control" id="selectStatus">
+                                        <option>status_1</option>
+                                        <option>status_2</option>
+                                        <option>status_3</option>
+                                        <option>status_4</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                        <!-- /.col-md-12 -->
-                         <div class="form-group col-md-12">
-                            <label for="selectStatus" class="col-sm-2 col-md-3 col control-label">Note</label>
-                            <div class="col-sm-9">
-                                <textarea class="form-control" id="selectStatus" rows="3"></textarea>
-                            </div>
-                        </div>
-                        <!-- /.col-md-12 -->
+                        <!-- / Status -->
                     </div>
-                    <!-- /.col-md-6 -->
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group col-md-12">
+                            <label for="editor" class="col-sm-2 col-md-3 col control-label">Note</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" id="editor" name="editor" rows="8">Type here!</textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / Note -->
                 </div>
-                <!-- /.row -->
+                <!-- /.form-row -->
             </div>
             <!-- /.box-body -->
-            <div class="box-footer">
-                <div class="row justify-content-around">
-                    <div class="col-sm-2">
-                        <button type="submit" class="btn btn-default" id="btnClear">Delete</button>
-                    </div>
-                    <div class="col-sm-4">
-                        <button type="submit" class="btn btn-success" id="btnSave">Save</button>
+
+            <div class="container box-footer">
+                <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6">
+                        <div class="col-md-12">
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn btn-default" id="btnClear">Clear</button>
+                                <button type="submit" class="btn btn-info" id="btnCreate">Create</button>
+                                <button type="submit" class="btn btn-success" id="btnSave">Save</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- /.box-footer -->
-        </div>
+        
     </form>
 
-
+</div>
     <!-- /.box -->
+<div class="box">
     <div class="container">
         <div class="row mt-2">
             <table class="table">
-                <tr>
-                    <th>
-                        @Html.Label("No")
-                    </th>
-                    <th>
-                        @Html.Label("Student ID")
-                    </th>
-                    <th>
-                        @Html.Label("Start Date")
-                    </th>
-                    <th>
-                        @Html.Label("Contract Date")
-                    </th>
-                    <th>
-                        @Html.Label("Status")
-                    </th>
-                    <th>
-                        @Html.Label("Note")
-                    </th>
-                    
-                </tr>
-                <tbody id="dataTable"></tbody>
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.Label("No")
+                        </th>
+                        <th>
+                            @Html.Label("Student ID")
+                        </th>
+                        <th>
+                            @Html.Label("Start Date")
+                        </th>
+                        <th>
+                            @Html.Label("Contract Date")
+                        </th>
+                        <th>
+                            @Html.Label("Status")
+                        </th>
+                        <th>
+                            @Html.Label("Note")
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody id="dataTable">
+                    <tr>
+                        <td>1</td>
+                        <td>1512091</td>
+                        <td>15/02/2019</td>
+                        <td>15/02/2019</td>
+                        <td>status_1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1512091</td>
+                        <td>15/02/2019</td>
+                        <td>15/02/2019</td>
+                        <td>status_1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1512091</td>
+                        <td>15/02/2019</td>
+                        <td>15/02/2019</td>
+                        <td>status_1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>
-
+</div>
